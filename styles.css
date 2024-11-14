@@ -1,0 +1,116 @@
+/* Reset básico para remover margens e paddings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuração da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* Estilo da Sidebar */
+.sidebar {
+    width: 15%;
+    background-color: #fef5e7;
+    border-right: 1px solid #dbdbdb;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Garantir que a sidebar esteja acima do conteúdo */
+}
+
+/* Estilo do título/logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff8c42;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 2; /* Evita que o logo fique por trás do conteúdo */
+}
+
+/* Estilo do menu */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Links de navegação */
+.menu-item {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.menu-item:hover {
+    color: #ff8c42;
+}
+
+/* Tamanho menor dos ícones */
+.menu-item span {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Estilo da área de conteúdo principal */
+.main-content {
+    margin-left: 15%; /* Espaço para a sidebar */
+    padding: 20px;
+    width: 85%; /* Ajustar largura para evitar sobreposição */
+    position: relative;
+    z-index: 0; /* Para manter o conteúdo principal abaixo da sidebar */
+}
+
+/* Estilos da lupa de pesquisa */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 180px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+}
