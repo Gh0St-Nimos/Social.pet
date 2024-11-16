@@ -1,116 +1,141 @@
-/* Reset básico para remover margens e paddings */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Configuração da página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-}
-
-/* Estilo da Sidebar */
+/* Estilo geral do menu lateral */
 .sidebar {
-    width: 15%;
-    background-color: #fef5e7;
-    border-right: 1px solid #dbdbdb;
-    padding-top: 20px;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px; /* Largura inicial do menu */
     height: 100%;
-    text-align: center;
+    background-color: rgba(255, 217, 190, 0.66); /* Cor de fundo do menu */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1; /* Garantir que a sidebar esteja acima do conteúdo */
+    padding-top: 20px;
 }
 
-/* Estilo do título/logo */
+/* Estilo da logo (imagem com borda redonda) */
 .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ff8c42;
+    width: 50px; /* Largura da imagem da logo */
+    height: 50px; /* Altura da imagem da logo */
+    border-radius: 50%; /* Borda redonda */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
     margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    z-index: 2; /* Evita que o logo fique por trás do conteúdo */
 }
 
-/* Estilo do menu */
+/* Estilo do menu (lista de navegação) */
 .sidebar nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 100%;
+    margin: 10px;
+    width: 15px; /* Ajuste conforme necessário */
+    text-align: center;
 }
 
 .sidebar nav ul li {
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: 15px;
+    width: 100%; /* Manter largura total para alinhar os ícones verticalmente */
 }
 
 /* Links de navegação */
 .menu-item {
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding: 8px 0;
-    transition: color 0.3s ease;
-    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    color: #c17e55;
+    font-size: 14px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 0;
+    width: 100%; /* Manter largura total */
 }
 
-.menu-item:hover {
-    color: #ff8c42;
-}
-
-/* Tamanho menor dos ícones */
 .menu-item span {
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
-/* Estilo da área de conteúdo principal */
-.main-content {
-    margin-left: 15%; /* Espaço para a sidebar */
+/* Efeito hover nos itens do menu */
+.menu-item:hover {
+    background-color: #ffd9be;
+    color: #c17e55;
+    border-radius: 10px; /* Bordas arredondadas no hover */
+}
+
+/* Ícones */
+.menu-item span::before {
+    display: block;
+    font-size: 80px; /* Tamanho do ícone */
+    margin-bottom: 5px;
+}
+/* Estilo geral do conteúdo (área de posts) */
+.content {
+    margin-left: 60px; /* Para não sobrepor o menu lateral */
     padding: 20px;
-    width: 85%; /* Ajustar largura para evitar sobreposição */
-    position: relative;
-    z-index: 0; /* Para manter o conteúdo principal abaixo da sidebar */
 }
 
-/* Estilos da lupa de pesquisa */
-.search-form {
-    position: relative;
+/* Container para os posts */
+.posts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois posts por linha */
+    gap: 20px; /* Espaço entre os posts */
+    margin-top: 20px;
+}
+
+/* Estilo do container de cada post */
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para garantir que a borda arredondada funcione */
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+    width: 100%; /* Certificando-se de que o post ocupa toda a largura disponível */
+}
+
+/* Cabeçalho do post (nome do usuário e botão de seguir) */
+.post-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+    width: 100%; /* Garante que os itens do cabeçalho ocupem a largura inteira */
 }
 
-.search-input {
-    padding: 8px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    width: 180px;
-    margin-right: 10px;
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c17e55;
+    margin-right: 10px; /* Espaçamento entre o nome e o botão */
 }
 
-.search-button {
-    background-color: transparent;
+.follow-btn {
+    background-color: #ffd9be;
     border: none;
-    padding: 5px;
+    color: #c17e55;
+    padding: 5px 10px;
+    font-size: 12px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.search-icon {
-    width: 18px;
-    height: 18px;
+.follow-btn:hover {
+    background-color: #c17e55;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilo da imagem do post */
+.post-image img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    object-fit: cover;
+}
+
+/* Estilo responsivo: para telas pequenas */
+@media (max-width: 768px) {
+    .posts-container {
+        grid-template-columns: 1fr; /* Um post por linha em telas pequenas */
+    }
 }
