@@ -1,0 +1,69 @@
+/* Estilo geral do menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: rgba(255, 217, 190, 0.66);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Estilo da logo (imagem com borda redonda) */
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Estilo do menu (lista de navegação) */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    width: 15px;
+    text-align: center;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Links de navegação */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #c17e55;
+    font-size: 14px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.menu-item span {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Efeito hover nos itens do menu */
+.menu-item:hover {
+    background-color: #ffd9be;
+    color: #c17e55;
+    border-radius: 10px;
+}
+
+/* Ícones */
+.menu-item span::before {
+    display: block;
+    font-size: 80px;
+    margin-bottom: 5px;
+}
