@@ -69,73 +69,85 @@
 }
 /* Estilo geral do conteúdo (área de posts) */
 .content {
-    margin-left: 60px; /* Para não sobrepor o menu lateral */
+    margin-left: 50px; /* Para não sobrepor o menu lateral */
     padding: 20px;
 }
 
-/* Container para os posts */
-.posts-container {
+.posts {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dois posts por linha */
-    gap: 20px; /* Espaço entre os posts */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
     margin-top: 20px;
+    padding:  100px;
+    position: relative;
 }
 
-/* Estilo do container de cada post */
 .post {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Para garantir que a borda arredondada funcione */
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Certificando-se de que o post ocupa toda a largura disponível */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+     /* A postagem ficará acima do fundo, mas abaixo de outros elementos */
 }
 
-/* Cabeçalho do post (nome do usuário e botão de seguir) */
+
+
 .post-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    width: 100%; /* Garante que os itens do cabeçalho ocupem a largura inteira */
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #eee;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .username {
-    font-size: 16px;
-    font-weight: bold;
-    color: #c17e55;
-    margin-right: 10px; /* Espaçamento entre o nome e o botão */
+    color: #333;
 }
 
 .follow-btn {
-    background-color: #ffd9be;
+    background-color: #f4b898;
+    color: #fff;
     border: none;
-    color: #c17e55;
+    border-radius: 5px;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .follow-btn:hover {
     background-color: #c17e55;
-    color: #fff;
-    border-radius: 5px;
 }
 
-/* Estilo da imagem do post */
 .post-image img {
-    width: 50%;
+    width: 100%;
     height: auto;
-    border-radius: 10px; /* Bordas arredondadas para a imagem */
-    object-fit: cover;
+    border-bottom: 2px solid #eee;
 }
 
-/* Estilo responsivo: para telas pequenas */
-@media (max-width: 768px) {
-    .posts-container {
-        grid-template-columns: 1fr; /* Um post por linha em telas pequenas */
+@media screen and (max-width: 1024px) {
+    .posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post-header {
+        flex-direction: column; /* Empilha os elementos no cabeçalho em telas menores */
+        text-align: center; /* Alinha o conteúdo ao centro */
+    }
+    .follow-btn {
+        width: 90%; /* Torna o botão de seguir mais largo em telas pequenas */
+        margin-top: 10px; /* Adiciona espaçamento entre os elementos */
     }
 }
