@@ -1,24 +1,24 @@
 /* Estilo geral do menu lateral */
 .sidebar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 60px; /* Largura inicial do menu */
+    z-index: 1;
+    width: 100px; /* Largura inicial do menu */
     height: 100%;
-    background-color: rgba(255, 217, 190, 0.66); /* Cor de fundo do menu */
+    background-color: rgba(255, 217, 190, 100);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+
 }
 
 /* Estilo da logo (imagem com borda redonda) */
 .logo {
-    width: 50px; /* Largura da imagem da logo */
-    height: 50px; /* Altura da imagem da logo */
-    border-radius: 50%; /* Borda redonda */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
@@ -27,13 +27,13 @@
     list-style: none;
     padding: 0;
     margin: 10px;
-    width: 15px; /* Ajuste conforme necessário */
+    width: 15px;
     text-align: center;
 }
 
 .sidebar nav ul li {
     margin-bottom: 15px;
-    width: 100%; /* Manter largura total para alinhar os ícones verticalmente */
+    width: 100%;
 }
 
 /* Links de navegação */
@@ -46,7 +46,7 @@
     font-size: 14px;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px 0;
-    width: 100%; /* Manter largura total */
+    width: 100%
 }
 
 .menu-item span {
@@ -58,29 +58,30 @@
 .menu-item:hover {
     background-color: #ffd9be;
     color: #c17e55;
-    border-radius: 10px; /* Bordas arredondadas no hover */
+    border-radius: 10px;
 }
 
 /* Ícones */
 .menu-item span::before {
     display: block;
-    font-size: 80px; /* Tamanho do ícone */
+    font-size: 80px;
     margin-bottom: 5px;
 }
 /* Estilo geral do conteúdo (área de posts) */
 .content {
-    margin-left: 50px; /* Para não sobrepor o menu lateral */
-    padding: 20px;
+    margin-left: 50px;
+    padding: 100px;
 }
-
 .posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap; /* Para garantir que os posts se ajustem */
     gap: 10px;
     margin-top: 20px;
-    padding:  100px;
-    position: relative;
+    padding: 200px;
+    position: relative; /* Modificado de absolute para relative */
+    z-index: 10; /* Garantir que o conteúdo dos posts tenha um z-index maior */
 }
+
 
 .post {
     background-color: #fff;
@@ -89,7 +90,6 @@
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     position: relative;
-     /* A postagem ficará acima do fundo, mas abaixo de outros elementos */
 }
 
 
@@ -97,11 +97,12 @@
 .post-header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 15px;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #eee;
+    padding: 5px 70px;
+    background-color: #ffd9be;
+    border-bottom: 1px solid #eee;
     font-size: 16px;
     font-weight: bold;
+    z-index: 1;
 }
 
 .username {
@@ -112,8 +113,8 @@
     background-color: #f4b898;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+    border-radius: 10px;
+    padding: 10px 10px;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -131,7 +132,7 @@
 
 @media screen and (max-width: 1024px) {
     .posts {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Altera para 2 colunas em telas menores */
     }
 }
 
@@ -143,11 +144,11 @@
 
 @media screen and (max-width: 480px) {
     .post-header {
-        flex-direction: column; /* Empilha os elementos no cabeçalho em telas menores */
-        text-align: center; /* Alinha o conteúdo ao centro */
+        flex-direction: column;
+        text-align: center;
     }
     .follow-btn {
-        width: 90%; /* Torna o botão de seguir mais largo em telas pequenas */
-        margin-top: 10px; /* Adiciona espaçamento entre os elementos */
+        width: 90%;
+        margin-top: 10px;
     }
 }
