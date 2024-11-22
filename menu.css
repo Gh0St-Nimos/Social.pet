@@ -33,7 +33,7 @@
 
 .sidebar nav ul li {
     margin-bottom: 15px;
-    width: 100%;
+    width: 100%; /* Manter largura total para alinhar os ícones verticalmente */
 }
 
 /* Links de navegação */
@@ -46,7 +46,7 @@
     font-size: 14px;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px 0;
-    width: 100%;
+    width: 100%; /* Manter largura total >:( */
 }
 
 .menu-item span {
@@ -54,7 +54,7 @@
     margin-top: 5px;
 }
 
-/* Efeito hover nos itens do menu */
+
 .menu-item:hover {
     background-color: #ffd9be;
     color: #c17e55;
@@ -66,4 +66,9 @@
     display: block;
     font-size: 80px;
     margin-bottom: 5px;
+}
+/* Estilo geral do conteúdo (área de posts) */
+.content {
+    margin-left: 50px;
+    padding: 20px;
 }
