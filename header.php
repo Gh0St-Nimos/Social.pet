@@ -25,5 +25,7 @@
         </nav>
     </header>
 </div>
+
+</head>
 </body>
 </html>
