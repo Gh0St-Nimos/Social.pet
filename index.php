@@ -9,40 +9,61 @@
     <link rel="stylesheet" href="css/posts.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="/Patagram/public/assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
-<div class="container" style="margin-left: 1px">
-    <h1> Patagram!</h1>
-    <p>Compartilhe fotos dos seus pets com o mundo.</p>
-    <script src="https://cdn.jsdelivr.net/gh/umLusca/myTools@master/javascript/libraries/fontAwesome.min.js"></script>
-    <div class="posts">
-        <div class="post">
-            <div class="post-header">
-                <span class="username">João Pet</span>
-                <button class="follow-btn">Seguir</button>
-            </div>
-            <div class="post-image">
-                <img src="caminho-da-imagem-do-post.jpg" alt="Imagem do post">
-            </div>
-            <div class="post-footer">
-                <button class="like-btn">Curtir</button>
-                <button class="save-btn">Salvar</button>
-            </div>
-        </div>
+<!-- Modal para exibição da imagem -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 
-        <div class="post">
-            <div class="post-header">
-                <span class="username">Maria Cat</span>
-                <button class="follow-btn">Seguir</button>
+
+
+<div class="container">
+
+    <div class="container" style="margin-left: 1px">
+        <h1 class="title">Patagram!</h1>
+        
+
+        <div class="users-wrapper">
+            <!-- Container de Postagem 1 -->
+            <div class="user-container">
+                <div class="user-header">
+                    <img src="https://i.pinimg.com/736x/94/43/c9/9443c9b65998a610b8e058f72cb8c0b6.jpg" alt="Foto do usuário" class="user-photo">
+                    <span class="username">Maui_0Pa</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)">Seguir</button>
+                </div>
+                <div class="post-area">
+                    <img src="https://i.pinimg.com/736x/89/47/3d/89473dc14d6c9b4751807946e5217cfb.jpg" alt="Foto do pet" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn">Curtir</button>
+                        <button class="save-btn">Salvar</button>
+                    </div>
+                </div>
             </div>
-            <div class="post-image">
-                <img src="caminho-da-imagem-do-post2.jpg" alt="Imagem do post">
+
+            <!-- Container de Postagem 2 -->
+            <div class="user-container">
+                <div class="user-header">
+                    <img src="https://i.pinimg.com/736x/c3/e8/05/c3e80532e819f3a80363ef30048bebd6.jpg" alt="Foto do usuário" class="user-photo">
+                    <span class="username">Moypop</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)">Seguir</button>
+                </div>
+                <div class="post-area">
+                    <img src="https://i.pinimg.com/736x/c3/0e/d8/c30ed8883ff25fca18206ee887aacf4d.jpg" alt="Foto do pet" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn">Curtir</button>
+                        <button class="save-btn">Salvar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="cookieAlert" class="alert">
+
+<div id="cookieAlert" class="alert">
     <div id="cookieContent">
         <span id="cookieEmoji">🍪🥛</span>
         <div id="cookieText">
@@ -120,8 +141,38 @@
 
     document.getElementById('declineBtn').addEventListener('click', function() {
         document.getElementById('cookieAlert').style.display = 'none';
+
     });
 
 </script>
+    <script>
+        // Referências ao Modal e elementos
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        // Função para abrir o Modal ao clicar na imagem
+        document.querySelectorAll('.post-image').forEach(image => {
+            image.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImg.src = this.src; // Define a imagem clicada no Modal
+            });
+        });
+
+        // Fechar o Modal ao clicar no botão "x"
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        // Fechar o Modal ao clicar fora da imagem
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+        
+    </script>
+<script>
+
 </body>
 </html>
