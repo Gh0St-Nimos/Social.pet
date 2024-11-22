@@ -9,6 +9,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // aqui checo se ta ok
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Conexão falhou: " . $conn->connect_error);
 }
 ?>
