@@ -1,9 +1,8 @@
 -- vai ser necessario criar essa aql no banco de dados, basta copiar o código a seguir.
 
-CREATE TABLE projects (
+CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    senha VARCHAR(255) NOT NULL, /* tem que ter, no minimo, 250 linhas para poder criptografar */
-    usuario_id INT NOT NULL
+    usuario VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL  /* Tem que ter no minimo 255 linhas para a criptografia */
 );
