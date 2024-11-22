@@ -1,23 +1,31 @@
 <?php
-include 'conexao.php'; //aqui chama a conexao.php
+include 'conexao.php'; // aqui chama a conexao.php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // é importante lembrar que aqui eu pego os dados do formulario!
+    // aqui pega os dados do formulário
     $usuario = $_POST['usuario'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $usuario_id = 1; // "por enquanto, um ID fixo de usuário, depois incluimos um login"
+    $usuario_id = 1; // prr enquanto, um ID fixo de usuário, depois podemos incluir um login
 
-    // inserindo no banco
-   $sql = "INSERT INTO projects (usuario, email, senha, usuario_id)
-        VALUES ('$usuario', '$email', '$senha', '$usuario_id')";
+    // hashing da senha por segurança
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Novo projeto adicionado com sucesso!";
+    // preparando a consulta SQL com placeholders, com uso do '?'
+    $sql = $conn->prepare("INSERT INTO projects (usuario, email, senha, usuario_id) 
+                           VALUES (?, ?, ?, ?)");
+
+    // ligando as variáveis aos placeholders
+    $sql->bind_param("sssi", $usuario, $email, $senha_hash, $usuario_id);
+
+    // executando a consulta
+    if ($sql->execute()) {
+        echo "Novo usuário adicionado com sucesso!";
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        echo "Erro: " . $sql->error;
     }
 
+    $sql->close();
     $conn->close();
 }
 ?>
