@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_id = 1; // "por enquanto, um ID fixo de usuário, depois incluimos um login"
 
     // inserindo no banco
-    $sql = "INSERT INTO projects (usuario, email, senha, usuario_id)
-            VALUES ('usuario', 'email', 'senha', 'usuario_id')";
+   $sql = "INSERT INTO projects (usuario, email, senha, usuario_id)
+        VALUES ('$usuario', '$email', '$senha', '$usuario_id')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Novo projeto adicionado com sucesso!";
