@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Patagram</title>
     <link rel="stylesheet" href="/Patagram/public/assets/css/styles.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/posts.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="/Patagram/public/assets/js/script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
-<!-- Modal para exibição da imagem -->
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImage">
 </div>
-
-
-
 <div class="container">
 
     <div class="container" style="margin-left: 1px">
         <h1 class="title">Patagram!</h1>
-        
-
         <div class="users-wrapper">
-            <!-- Container de Postagem 1 -->
             <div class="user-container">
                 <div class="user-header">
                     <img src="https://i.pinimg.com/736x/94/43/c9/9443c9b65998a610b8e058f72cb8c0b6.jpg" alt="Foto do usuário" class="user-photo">
@@ -43,8 +34,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Container de Postagem 2 -->
             <div class="user-container">
                 <div class="user-header">
                     <img src="https://i.pinimg.com/736x/c3/e8/05/c3e80532e819f3a80363ef30048bebd6.jpg" alt="Foto do usuário" class="user-photo">
@@ -61,8 +50,6 @@
             </div>
         </div>
     </div>
-
-
 <div id="cookieAlert" class="alert">
     <div id="cookieContent">
         <span id="cookieEmoji">🍪🥛</span>
@@ -76,7 +63,6 @@
     </div>
 </div>
 <style>
-
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -129,12 +115,12 @@
 
 </style>
 <script>
-    // Exibir o alerta assim que a página carregar
+
     window.onload = function() {
         document.getElementById('cookieAlert').style.display = 'block';
     };
 
-    // Fechar o alerta quando o botão "Aceitar" ou "Recusar" for clicado
+
     document.getElementById('acceptBtn').addEventListener('click', function() {
         document.getElementById('cookieAlert').style.display = 'none';
     });
@@ -146,25 +132,25 @@
 
 </script>
     <script>
-        // Referências ao Modal e elementos
+
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         const closeBtn = document.getElementsByClassName('close')[0];
 
-        // Função para abrir o Modal ao clicar na imagem
+
         document.querySelectorAll('.post-image').forEach(image => {
             image.addEventListener('click', function () {
                 modal.style.display = 'block';
-                modalImg.src = this.src; // Define a imagem clicada no Modal
+                modalImg.src = this.src;
             });
         });
 
-        // Fechar o Modal ao clicar no botão "x"
+
         closeBtn.onclick = function () {
             modal.style.display = 'none';
         };
 
-        // Fechar o Modal ao clicar fora da imagem
+
         modal.onclick = function (event) {
             if (event.target === modal) {
                 modal.style.display = 'none';

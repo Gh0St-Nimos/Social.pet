@@ -9,7 +9,7 @@
                 <button class="follow-btn">Seguir</button>
             </div>
             <div class="post-image">
-                <img src="caminho-da-imagem-do-post.jpg" alt="Imagem do post">
+                <img src="https://i.pinimg.com/736x/4a/9e/d2/4a9ed20abef312c246108ca768106b48.jpg" alt="Imagem do post">
             </div>
         </div>
 
