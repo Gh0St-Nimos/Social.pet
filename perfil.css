@@ -1,0 +1,101 @@
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-user-picture  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fbbd5d;
+    overflow: hidden;
+}
+.profile-user-picture  {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.profile-info {
+    margin-left: 20px;
+}
+
+.username-editable,
+.bio-editable {
+    display: flex;
+    align-items: center;
+}
+
+.btn-edit-icon {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+
+
+}
+
+.profile-stats p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.profile .pictures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.profile .picture {
+    justify-self: center;
+    background-color: rgba(255, 217, 190, 0.67);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    width: 280px;
+    height: 280px;
+    font-family: Arial, sans-serif;
+}
+.profile .picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #fbbd5d;
+}
+
+.profile .btn-follow,
+.profile .btn-edit {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: background-color 0.3s;
+}
+
+.profile .btn-follow {
+    background-color: #0095f6;
+    color: white;
+}
+
+.profile .btn-follow:hover {
+    background-color: #007bb5;
+}
+
+
+
+.profile .btn-edit {
+    background-color: #fbbd5d;
+    color: white;
+}
+
+.profile .btn-edit:hover {
+    background-color: #f9a64c;
+}

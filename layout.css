@@ -1,0 +1,39 @@
+/* Tags */
+main {
+    padding: 3em;
+    grid-area: pagina;
+}
+footer {
+    text-align: center;
+}
+
+
+/* Fundo da página */
+body {
+    background-color: #fdf5e6; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #f4b898;
+    width: 45%;
+}
+button:hover {
+    background-color: #c17e55;
+}
+
+
+/* Outros estilos de layout */
+
+.container {
+    display: grid;
+    grid-template-areas: "menu pagina" "menu footer";
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto 60px;
+    height: 100dvh;
+}
