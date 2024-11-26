@@ -10,7 +10,7 @@ define("ROOT", dirname(__FILE__));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Patagram</title>
 	<?php include(ROOT . '/components/head.php'); ?>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/perfil.css" >
 </head>
 <body>
@@ -21,27 +21,19 @@ define("ROOT", dirname(__FILE__));
         <!-- Cabeçalho do perfil -->
         <section class="profile-header">
             <div class="profile-user-picture">
-                <img src="img/user-profile.jpg" alt="">
+                <img src="./assets/img/imagem7.jpeg" alt="">
             </div>
             <div class="profile-info">
                 <div class="username-editable">
-                    <h2 class="username">Pluto_elDiablo</h2>
-                    <button class="btn-edit-icon" onclick="editField('username')"><i class="fa fa-pencil" style="color: orange"></i></button>
+                    <h2 class="username">Spike_1</h2>
                 </div>
-                <div class="bio-editable">
-                    <p class="bio">Insira sua bio</p>
-                    <button class="btn-edit-icon" onclick="editField('bio')"><i class="fa fa-pencil" style="color: orange"></i></button>
-                </div>
+
                 <div class="profile-stats">
                     <p><strong>Seguidores:</strong> 120</p>
                     <p><strong>Curtidas:</strong> 320</p>
                     <p><strong>Seguindo:</strong> 50</p>
                 </div>
-                <div class="profile-actions">
-                    <button class="btn-follow">Seguir</button>
-                    <button class="btn-edit">Editar Perfil</button>
-                </div>
-            </div>
+
         </section>
 
         <!-- Galeria de posts -->
@@ -49,25 +41,25 @@ define("ROOT", dirname(__FILE__));
             <div class="pictures-container">
                 <!-- Exemplo de post -->
                 <div class="picture">
-                    <img src="img/pet1.jpg" alt="Pet 1">
+                    <img src="./assets/img/imagem7.jpeg" alt="Pet 1">
                 </div>
                 <div class="picture">
-                    <img src="img/pet2.jpg" alt="Pet 2">
+                    <img src="./assets/img/imagem8.jpeg" alt="Pet 2">
                 </div>
                 <div class="picture">
-                    <img src="img/pet3.jpg" alt="Pet 3">
+                    <img src="./assets/img/imagem9.jpeg" alt="Pet 3">
                 </div>
                 <div class="picture">
-                    <img src="img/pet1.jpg" alt="Pet 1">
+                    <img src="./assets/img/imagem4.jpeg" alt="Pet 1">
                 </div>
                 <div class="picture">
-                    <img src="img/pet2.jpg" alt="Pet 2">
+                    <img src="./assets/img/imagem5.jpeg" alt="Pet 2">
                 </div>
                 <div class="picture">
-                    <img src="img/pet3.jpg" alt="Pet 3">
+                    <img src="./assets/img/imagem6.jpeg" alt="Pet 3">
                 </div>
                 <div class="picture">
-                    <img src="img/pet3.jpg" alt="Pet 3">
+                    <img src="./assets/img/imagem10.jpeg" alt="Pet 3">
                 </div>
                 <!-- Adicione mais posts conforme necessário -->
             </div>

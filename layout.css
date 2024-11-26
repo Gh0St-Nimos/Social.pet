@@ -10,9 +10,11 @@ footer {
 
 /* Fundo da página */
 body {
-    background-color: #fdf5e6; 
+    background-color: #fdf5e6; /* Bege clarinho */
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
+
+
 }
 button {
     padding: 8px 12px;

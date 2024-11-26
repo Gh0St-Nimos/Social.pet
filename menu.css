@@ -18,8 +18,8 @@
 /* Estilo da logo (imagem com borda redonda) */
 .sidebar .logo {
     margin-top: 20px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -46,9 +46,9 @@
     align-items: center;
     text-decoration: none;
     color: #c17e55;
-    font-size: 14px;
+    font-size: 20px;
     transition: color 0.3s, background-color 0.3s;
-    padding: 10px 0;
+    padding: 20px 0;
     width: 100%; /* Manter largura total >:( */
 }
 

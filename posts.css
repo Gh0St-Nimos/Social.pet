@@ -4,23 +4,19 @@
     display: grid;
     justify-content: center;
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     margin-top: 30px;
-}
-.post {
-    justify-self: center;
-}
-@media (min-width: 800px) {
-    .posts-container { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Container do POST em si*/
 .post {
+    justify-self: center;
     background-color: rgba(255, 217, 190, 0.67);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     width: 280px;
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 /* Foto do usuário e botão */
@@ -42,7 +38,7 @@
     font-size: 18px;
     font-weight: bold;
     flex-grow: 1;
-    color: #333;
+    color: #c17e55;
 }
 
 
@@ -72,6 +68,7 @@
     border-radius: 5px;
     padding: 8px 12px;
     cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
     transition: background-color 0.3s ease;
 }
 .post-btn-follow:hover {
@@ -95,5 +92,5 @@
     background-color: #e07753;
 }
 .post-btn-save:hover {
-    background-color: #d4a055;
+    background-color: #c17e55;
 }

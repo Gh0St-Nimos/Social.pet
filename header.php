@@ -1,6 +1,6 @@
 
 <header class="sidebar">
-    <img src="aaaaaa" alt="Logo" class="logo">
+    <img src="./assets/img/logo.png" alt="Logo" class="logo">
     <nav aria-label="Menu de navegação">
         <ul>
             <li><a href="./index.php" class="menu-item"><i class="fa-sharp-duotone fa-solid fa-house"></i></a></li>

@@ -6,7 +6,7 @@ define("ROOT", dirname(__FILE__));
 <html lang="pt-br">
 <head>
 	<?php include(ROOT . '/components/head.php'); ?>
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Modal para exibição da imagem -->
@@ -41,6 +41,20 @@ define("ROOT", dirname(__FILE__));
             </div>
 
             <!-- Container de Postagem 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://i.pinimg.com/736x/c3/e8/05/c3e80532e819f3a80363ef30048bebd6.jpg" alt="Foto do usuário" class="post-user-profile">
+                    <span class="post-user-nick">Moypop</span>
+                    <button class="post-btn-follow" onclick="toggleFollow(this)">Seguir</button>
+                </div>
+                <div class="post-area">
+                    <img src="https://i.pinimg.com/736x/c3/0e/d8/c30ed8883ff25fca18206ee887aacf4d.jpg" alt="Foto do pet" class="post-picture">
+                    <div class="post-actions">
+                        <button class="post-btn-like">Curtir</button>
+                        <button class="post-btn-save">Salvar</button>
+                    </div>
+                </div>
+            </div>
             <div class="post">
                 <div class="post-header">
                     <img src="https://i.pinimg.com/736x/c3/e8/05/c3e80532e819f3a80363ef30048bebd6.jpg" alt="Foto do usuário" class="post-user-profile">
