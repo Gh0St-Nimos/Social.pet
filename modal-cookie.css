@@ -1,0 +1,32 @@
+
+.cookie-modal {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f5deb3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none; /* Inicialmente oculto */
+    width: 250px;
+    text-align: center;
+}
+
+.cookie-modal .cookie-emoji {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cookie-modal .cookie-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.cookie-modal .cookie-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
