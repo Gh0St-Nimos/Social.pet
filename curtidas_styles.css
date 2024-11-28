@@ -1,12 +1,27 @@
- body {
+body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-}
-.post {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-.post h2 {
     margin: 0;
- }
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.liked-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    border-radius: 8px;
+}
