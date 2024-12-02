@@ -1,6 +1,7 @@
-/* Estilo geral do menu lateral */
+
+
 .sidebar {
-    position: fixed;
+    grid-area: menu;
     top: 0;
     left: 0;
     width: 60px;
@@ -10,34 +11,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+
+
 }
 
-/* Estilo da logo (imagem com borda redonda) */
-.logo {
+
+.sidebar .logo {
+    margin-top: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* Estilo do menu (lista de navegação) */
+
 .sidebar nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px;
-    width: 15px;
+    width: 100%;
     text-align: center;
 }
 
 .sidebar nav ul li {
-    margin-bottom: 15px;
-    width: 100%; /* Manter largura total para alinhar os ícones verticalmente */
+    margin-bottom: 25px;
+    width: 100%;
 }
 
-/* Links de navegação */
-.menu-item {
+
+.sidebar .menu-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,26 +51,25 @@
     width: 100%; /* Manter largura total >:( */
 }
 
-.menu-item span {
+.sidebar i {
+    color: #c17e55;
+}
+
+.sidebar .menu-item span {
     font-size: 12px;
     margin-top: 5px;
 }
 
 
-.menu-item:hover {
+.sidebar .menu-item:hover {
     background-color: #ffd9be;
     color: #c17e55;
     border-radius: 10px;
 }
 
-/* Ícones */
-.menu-item span::before {
+
+.sidebar .menu-item span::before {
     display: block;
     font-size: 80px;
     margin-bottom: 5px;
-}
-/* Estilo geral do conteúdo (área de posts) */
-.content {
-    margin-left: 50px;
-    padding: 20px;
 }

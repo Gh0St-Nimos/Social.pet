@@ -4,12 +4,12 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f5deb3;
+    background-color: #ffd9be;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    display: none; /* Inicialmente oculto */
+    display: none;
     width: 250px;
     text-align: center;
 }

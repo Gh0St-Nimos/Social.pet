@@ -1,0 +1,89 @@
+
+/* nun esquecer de tirar o bodinho */
+
+.chat-container {
+    background-color: #ffe4d1;
+    padding: 20px;
+
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(193, 126, 85);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.chat-header h2 {
+    font-size: 24px;
+    color: #3B3B3B;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 217, 190, 0.67);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact:hover {
+    background-color: #f4c099;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333; 
+}
+
+.message-preview {
+    color: #777;
+    font-size: 14px;
+}
+
+.message-time {
+    color: #A1A1A1;
+    font-size: 12px;
+    align-self: flex-start;
+}
+
+
+.contact-name:hover {
+    color: #c17e55;
+}
